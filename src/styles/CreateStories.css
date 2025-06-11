@@ -1,0 +1,545 @@
+ @font-face {
+    font-family: "Catchy Melody Regular";
+    src: url("https://db.onlinewebfonts.com/t/77e7d6163833ef57361590b8102835f7.eot");
+    src: url("https://db.onlinewebfonts.com/t/77e7d6163833ef57361590b8102835f7.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/77e7d6163833ef57361590b8102835f7.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/77e7d6163833ef57361590b8102835f7.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/77e7d6163833ef57361590b8102835f7.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/77e7d6163833ef57361590b8102835f7.svg#Catchy Melody Regular")format("svg");
+}
+ 
+@font-face {
+    font-family: "Barlow Condensed Regular";
+    src: url("https://db.onlinewebfonts.com/t/e0f817248b1df6f7242901463c4344e5.eot");
+    src: url("https://db.onlinewebfonts.com/t/e0f817248b1df6f7242901463c4344e5.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/e0f817248b1df6f7242901463c4344e5.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/e0f817248b1df6f7242901463c4344e5.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/e0f817248b1df6f7242901463c4344e5.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/e0f817248b1df6f7242901463c4344e5.svg#Barlow Condensed Regular")format("svg");
+}
+ 
+
+.create-stories-container {
+  position: relative;
+  height: 80vh;    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.main-box {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.vilotestar1 {
+  position: absolute;
+  top: 10%;
+  right: 90%;
+  width: 350px;
+  height: 100px;
+  z-index: 1000;
+  /* animation: sparkle 2s ease-in-out infinite; */
+}
+
+.vilotestar2 {
+  position: absolute;
+  bottom: 30%;
+  left: 90%;
+  width: 350px;
+  height: 100px;
+  z-index: 1000;
+  /* animation: sparkle 2s ease-in-out infinite; */
+}
+
+.vilotestar3 {
+  position: absolute;
+  bottom: 30%;
+  right: 100%;
+  width: 350px;
+  height: 100px;
+  z-index: 1000;
+  /* animation: sparkle 2s ease-in-out infinite; */
+}
+
+.first-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  text-align: justify;
+}
+
+.character-section {
+  flex: 0 0 auto;
+}
+
+.character-image {
+  width: auto;
+  height: 300px;
+  animation: slideInFromLeft 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.text-section {
+  flex: 1;
+  position: relative;
+}
+
+.yellow-star {
+  position: absolute;
+  top: -60px;
+  right: 70px;
+  width: 350px;
+  height: 100px;
+  z-index: 1000;
+  /* animation: sparkle 2s ease-in-out infinite; */
+}
+
+.main-title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 0;
+  display: flex;
+  gap: 2px;
+  margin-bottom: 10px;
+}
+
+.letter {
+  display: inline-block;
+  font-family: "Catchy Melody Regular";
+  font-size: 130px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: -7%;
+}
+
+.letter-c { background: linear-gradient(90deg, #CA01FF -6.74%, #C20AFD 3.46%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.letter-r { background: linear-gradient(90deg, #C20AFD 3.46%, #AF22FA 18.2%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.letter-e { background: linear-gradient(90deg, #AF22FA 18.2%, #8E4BF4 38.6%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.letter-a { background: linear-gradient(90deg, #8E4BF4 38.6%, #6283EC 62.41%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.letter-t { background: linear-gradient(90deg, #6283EC 62.41%, #2AC9E2 88.48%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.letter-e2 { background: linear-gradient(90deg, #2AC9E2 88.48%, #00FFDB 106.62%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+.sub-title {
+  color: #2C0A78;
+  font-family: "Catchy Melody Regular";
+  font-size: 53px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+  margin-left: 2%;
+}
+
+.sparkle-1 {
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  font-size: 2rem;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.second-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: end;
+  margin-right: -9%;
+}
+
+.download-text {
+  font-family: "Barlow Condensed Regular";
+  color: #000;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.app-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.app-button:hover {
+  transform: translateY(-2px);
+}
+
+.app-store-image {
+  height: 50px;
+  width: auto;
+  border-radius: 8px;
+}
+
+.star {
+  position: absolute;
+  font-size: 30px;
+  color: #9b59b6;
+  animation: float 3s ease-in-out infinite;
+  z-index: 1;
+}
+
+.star-1 {
+  top: 10%;
+  left: 10%;
+  color: #9b59b6;
+  animation-delay: 0s;
+}
+
+.star-2 {
+  top: 20%;
+  right: 15%;
+  color: #3498db;
+  animation-delay: 0.5s;
+}
+
+.star-3 {
+  bottom: 30%;
+  left: 5%;
+  color: #e74c3c;
+  animation-delay: 1s;
+}
+
+.star-4 {
+  bottom: 15%;
+  right: 10%;
+  color: #f39c12;
+  animation-delay: 1.5s;
+}
+
+.star-5 {
+  top: 50%;
+  left: 2%;
+  color: #2ecc71;
+  animation-delay: 2s;
+}
+
+.star-6 {
+  top: 80%;
+  right: 5%;
+  color: #ffd700;
+  animation-delay: 2.5s;
+  font-size: 2rem;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(180deg);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+/* Tablet Styles (769px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  
+  .create-stories-container {
+    height: 70vh;
+    padding: 0 20px;
+  }
+  
+  .main-box {
+    max-width: 700px;
+    padding: 40px 30px;
+  }
+  
+  .character-image {
+    height: 250px;
+  }
+  
+  .letter {
+    font-size: 100px;
+  }
+  
+  .sub-title {
+    font-size: 42px;
+  }
+  
+  .yellow-star {
+    width: 280px;
+    height: 80px;
+    top: -50px;
+    right: 50px;
+  }
+  
+  .vilotestar1, .vilotestar2, .vilotestar3 {
+    width: 280px;
+    height: 80px;
+  }
+  
+  .download-text {
+    font-size: 26px;
+  }
+  
+  .app-store-image {
+    height: 48px;
+  }
+  
+  .second-container {
+    gap: 18px;
+    margin-right: -5%;
+  }
+  
+  .first-container {
+    gap: 25px;
+  }
+}
+
+/* Mobile Styles (481px - 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
+  .main-title{
+    display: inline;
+  }
+  .create-stories-container {
+    height: auto;
+    min-height: 70vh;
+    padding: 20px 15px;
+  }
+  
+  .main-box {
+    padding: 30px 20px;
+    margin: 10px;
+    max-width: 100%;
+  }
+  
+  .first-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .character-image {
+    height: 180px;
+  }
+  
+  .text-section {
+    width: 100%;
+  }
+  
+  .yellow-star {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 60px;
+    margin: 0 auto 10px;
+    display: block;
+  }
+  
+  .letter {
+    font-size: 70px;
+  }
+  
+  .sub-title {
+    font-size: 32px;
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .second-container {
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 0;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .download-text {
+    font-size: 22px;
+  }
+  
+  .arrow {
+    transform: rotate(90deg);
+    font-size: 1.8rem;
+  }
+  
+  .app-buttons {
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+  }
+  
+  .app-store-image {
+    height: 45px;
+  }
+  
+  /* Hide decorative stars that might be too cluttered */
+  .vilotestar1, .vilotestar2, .vilotestar3 {
+    display: none;
+  }
+  
+  .star {
+    font-size: 20px;
+  }
+  
+  .star-3, .star-4, .star-5, .star-6 {
+    display: none;
+  }
+}
+
+/* Small Mobile Styles (≤480px) */
+@media (max-width: 480px) {
+  .create-stories-container {
+    height: auto;
+    min-height: 60vh;
+    padding: 15px 10px;
+  }
+  
+  .main-box {
+    padding: 20px 15px;
+    margin: 5px;
+  }
+  
+  .first-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .character-image {
+    height: 120px;
+  }
+  
+  .yellow-star {
+    width: 150px;
+    height: 45px;
+    margin-bottom: 5px;
+  }
+  
+  .letter {
+    font-size: 50px;
+  }
+  
+  .sub-title {
+    font-size: 24px;
+    margin-bottom: 3%;
+  }
+  
+  .second-container {
+    flex-direction: column;
+    gap: 12px;
+    margin-right: 0;
+    align-items: center;
+  }
+  
+  .download-text {
+    font-size: 18px;
+  }
+  
+  .arrow {
+    transform: rotate(90deg);
+    font-size: 1.5rem;
+  }
+  
+  .app-buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .app-store-image {
+    height: 40px;
+  }
+  
+  /* Hide all decorative elements for cleaner mobile view */
+  .vilotestar1, .vilotestar2, .vilotestar3 {
+    display: none;
+  }
+  
+  .star {
+    font-size: 16px;
+  }
+  
+  /* Keep only minimal decorative stars */
+  .star-3, .star-4, .star-5, .star-6 {
+    display: none;
+  }
+}
+
+/* Extra Small Mobile (≤360px) */
+@media (max-width: 360px) {
+  .create-stories-container {
+    padding: 10px 5px;
+  }
+  
+  .main-box {
+    padding: 15px 10px;
+  }
+  
+  .character-image {
+    height: 100px;
+  }
+  
+  .letter {
+    font-size: 42px;
+  }
+  
+  .sub-title {
+    font-size: 20px;
+  }
+  
+  .download-text {
+    font-size: 16px;
+  }
+  
+  .app-store-image {
+    height: 36px;
+  }
+  
+  .yellow-star {
+    width: 120px;
+    height: 35px;
+  }
+}

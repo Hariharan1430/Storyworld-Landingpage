@@ -1,0 +1,206 @@
+@font-face {
+  font-family: "DM Sans Regular";
+  src: url("https://db.onlinewebfonts.com/t/d9d77150b3dda1eea88a7a8f979e7711.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "DM Sans Medium";
+  src: url("https://db.onlinewebfonts.com/t/254e22acc9a3adcfe8330459cc54cabc.woff2") format("woff2");
+}
+
+/* Container styling */
+.fairytale-box {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Heading section */
+.header-section {
+  text-align: center;
+}
+
+.header-section h2 {
+    font-family: "DM Sans Regular";
+font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #2C0A78;
+
+
+}
+
+.header-section .highlight {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Decorative curve line image */
+.curve-line {
+  margin-top: 0.5rem;
+  width: 600px;
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 3%;
+}
+
+/* Description */
+.description-section {
+    font-family: "DM Sans Medium";
+
+  text-align: center;
+  margin-top: 1rem;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  color: #444;
+}
+
+/* Main content layout */
+/* Main content layout */
+.content-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch; /* Ensure equal height for children */
+  margin-top: 2rem;
+  min-height: 100%;
+}
+
+/* Left image container */
+.left-container {
+  flex: 0 0 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%; /* Stretch to match height */
+}
+
+.story-image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* Right step boxes container */
+.right-container {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%; /* Match left side height */
+  margin-left: -10%;
+}
+/* Individual step box */
+.step-box {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 12px;
+  /* transition: background 0.3s ease; */
+  cursor: default;
+}
+
+/* Number container */
+.step-number {
+    font-family: "DM Sans Medium";
+
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Text container next to number */
+.step-text {
+  margin-left: 1rem;
+  max-width: 250px;
+}
+
+.step-text h4 {
+      font-family: "DM Sans Medium";
+
+  margin: 0 0 0.25rem 0;
+  font-size: 16px;
+  color: #111;
+}
+
+.step-text p {
+        font-family: "DM Sans Medium";
+
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Default active (first box) */
+.right-container .step-box:first-child .step-number {
+  background: linear-gradient(270deg, #CA01FF -106.5%, #C30AFE -78.93%, #AF23FA -33.66%, #8F4BF4 23.71%, #6283ED 90.88%, #2ACAE3 165.44%, #00FFDB 217.23%);;
+  color: white;
+  border: none;
+}
+
+/* Hover effect on step number only */
+.step-box:hover .step-number {
+  background: linear-gradient(270deg, #CA01FF -106.5%, #C30AFE -78.93%, #AF23FA -33.66%, #8F4BF4 23.71%, #6283ED 90.88%, #2ACAE3 165.44%, #00FFDB 217.23%);;
+  color: white;
+  border: none;
+}
+
+/* Remove first box color when hovering others */
+.right-container:hover .step-box:first-child:not(:hover) .step-number {
+  background: #ffffff;
+  color: #888;
+  border: 1px solid #ddd;
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+
+  .content-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-container,
+  .right-container {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .story-image {
+    width: 100%;
+
+  }
+
+  .right-container {
+    margin-top: 1.5rem;
+    align-items: center;
+  }
+
+  .step-box {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .step-text {
+    max-width: 100%;
+  }
+  .header-section h2{
+    font-size: 24px;
+  }
+}

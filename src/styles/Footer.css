@@ -1,0 +1,222 @@
+@font-face {
+  font-family: "DM Sans Regular";
+  src: url("https://db.onlinewebfonts.com/t/d9d77150b3dda1eea88a7a8f979e7711.woff2") format("woff2");
+}
+@font-face {
+    font-family: "DM Sans Bold";
+    src: url("https://db.onlinewebfonts.com/t/182778942bc991e17d2a908129e53135.eot");
+    src: url("https://db.onlinewebfonts.com/t/182778942bc991e17d2a908129e53135.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/182778942bc991e17d2a908129e53135.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/182778942bc991e17d2a908129e53135.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/182778942bc991e17d2a908129e53135.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/182778942bc991e17d2a908129e53135.svg#DM Sans Bold")format("svg");
+}
+
+.footer {
+  background: linear-gradient(180deg, #CA01FF -84.16%, #C30AFE -39.99%, #AF23FA 32.56%, #8F4BF4 124.47%, #6283ED 232.11%, #2ACAE3 351.57%, #00FFDB 434.57%);
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 0px 0px 0px;
+  width: 100%;
+}
+
+.footer-main {
+  display: flex;
+  justify-content:space-around;
+  flex-wrap: wrap;
+  gap: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1 1 220px;
+  max-width: 240px;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+      font-family: "DM Sans Bold";
+
+  font-size: 22px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.footer-column p {
+    font-family: "DM Sans Regular";
+
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.footer-column a {
+      font-family: "DM Sans Regular";
+
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Section */
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.contact-info .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.follow-section {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.follow-label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 4px;
+}
+
+/* App Store Images */
+.store-img {
+  width: 130px;
+  margin: 6px 0;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+      font-family: "DM Sans Regular";
+
+  background: #fff;
+  color: #000;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+/* Responsive */
+/* Responsive: Tablet */
+@media (max-width: 1024px) {
+  
+
+  .footer-main {
+    gap: 30px;
+    justify-content: space-evenly;
+  }
+
+  .footer-column h3 {
+    font-size: 20px;
+  }
+
+  .footer-column p,
+  .footer-column a {
+    font-size: 14px;
+  }
+
+  .contact-info .icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .social-icons img {
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+  }
+
+  .store-img {
+    width: 120px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+  }
+}
+
+/* Responsive: Mobile */
+@media (max-width: 600px) {
+  
+  .footer-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .footer-column {
+    width: 100%;
+    text-align: center;
+    flex: 1 1 100px;
+  }
+
+  .footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .footer-column p,
+  .footer-column a {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .contact-info {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .follow-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .follow-label {
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .social-icons img {
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+  }
+
+  .store-img {
+    width: 110px;
+    margin: 6px auto;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+}

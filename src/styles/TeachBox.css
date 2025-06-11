@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "DM Sans Regular";
+  src: url("https://db.onlinewebfonts.com/t/d9d77150b3dda1eea88a7a8f979e7711.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "DM Sans Medium";
+  src: url("https://db.onlinewebfonts.com/t/254e22acc9a3adcfe8330459cc54cabc.woff2") format("woff2");
+}
+.teach-section {
+  padding: 40px 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.teach-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1400px;
+  text-align: center;
+}
+
+.teach-heading-box h2 {
+  font-family: "DM Sans Regular";
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 10%;
+  background: linear-gradient(90deg, #CA01FF -28.59%, #C20AFD -15.42%, #AF22FA 3.59%, #8E4BF4 29.92%, #6283EC 60.64%, #2AC9E2 94.29%, #00FFDB 117.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.teach-heading-box .highlight {
+  background: linear-gradient(90deg, #CA01FF -28.59%, #C20AFD -15.42%, #AF22FA 3.59%, #8E4BF4 29.92%, #6283EC 60.64%, #2AC9E2 94.29%, #00FFDB 117.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.teach-image-box {
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.teach-image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.teach-description-box p {
+    font-family: "DM Sans Medium";
+
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+  padding: 0 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .teach-heading-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .teach-description-box p {
+    font-size: 14px;
+  }
+}
