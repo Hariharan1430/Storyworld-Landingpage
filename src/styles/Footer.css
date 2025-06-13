@@ -1,68 +1,76 @@
 @font-face {
   font-family: "DM Sans Regular";
   src: url("https://db.onlinewebfonts.com/t/d9d77150b3dda1eea88a7a8f979e7711.woff2") format("woff2");
+  font-display: swap;
 }
+
 @font-face {
-    font-family: "DM Sans Bold";
-    src: url("https://db.onlinewebfonts.com/t/182778942bc991e17d2a908129e53135.eot");
-    src: url("https://db.onlinewebfonts.com/t/182778942bc991e17d2a908129e53135.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/182778942bc991e17d2a908129e53135.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/182778942bc991e17d2a908129e53135.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/182778942bc991e17d2a908129e53135.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/182778942bc991e17d2a908129e53135.svg#DM Sans Bold")format("svg");
+  font-family: "DM Sans Bold";
+  src: url("https://db.onlinewebfonts.com/t/182778942bc991e17d2a908129e53135.eot");
+  src: url("https://db.onlinewebfonts.com/t/182778942bc991e17d2a908129e53135.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/182778942bc991e17d2a908129e53135.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/182778942bc991e17d2a908129e53135.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/182778942bc991e17d2a908129e53135.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/182778942bc991e17d2a908129e53135.svg#DM Sans Bold") format("svg");
+  font-display: swap;
 }
 
 .footer {
   background: linear-gradient(180deg, #CA01FF -84.16%, #C30AFE -39.99%, #AF23FA 32.56%, #8F4BF4 124.47%, #6283ED 232.11%, #2ACAE3 351.57%, #00FFDB 434.57%);
   color: #fff;
-  font-family: 'Segoe UI', sans-serif;
-  padding: 40px 0px 0px 0px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px 0 0 0;
   width: 100%;
+  position: relative;
 }
 
 .footer-main {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 10px;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .footer-column {
-  flex: 1 1 220px;
   max-width: 240px;
   min-width: 200px;
 }
 
 .footer-column h3 {
-      font-family: "DM Sans Bold";
-
+  font-family: "DM Sans Bold", sans-serif;
   font-size: 22px;
   margin-bottom: 12px;
   font-weight: 700;
+  color: #fff;
 }
 
 .footer-column p {
-    font-family: "DM Sans Regular";
-
+  font-family: "DM Sans Regular", sans-serif;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.4;
   margin: 0;
+  color: #fff;
 }
 
 .footer-column a {
-      font-family: "DM Sans Regular";
-
+  font-family: "DM Sans Regular", sans-serif;
   display: block;
   font-size: 16px;
   color: #fff;
   text-decoration: none;
   margin-bottom: 8px;
+  transition: all 0.3s ease;
 }
 
 .footer-column a:hover {
   text-decoration: underline;
+  opacity: 0.8;
+}
+
+.footer-column a:focus {
+  outline: none;
 }
 
 /* Contact Section */
@@ -76,22 +84,48 @@
 .contact-info .icon {
   width: 18px;
   height: 18px;
+  flex-shrink: 0;
+}
+
+.contact-email {
+  margin-bottom: 0 !important;
+  display: inline !important;
 }
 
 .follow-section {
   display: flex;
+  align-items: center;
   gap: 10px;
   margin-top: 10px;
 }
 
 .follow-label {
-  font-weight: 600;
+  font-family: "DM Sans Regular", sans-serif;
+  font-weight: 400;
   font-size: 14px;
+  color: #fff;
+  white-space: nowrap;
 }
 
 .social-icons {
   display: flex;
   gap: 10px;
+  align-items: center;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-bottom: 0;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+.social-icons a:focus {
+  outline: none;
 }
 
 .social-icons img {
@@ -100,42 +134,140 @@
   border-radius: 50%;
   background: #fff;
   padding: 4px;
+  display: block;
 }
 
-/* App Store Images */
-.store-img {
+/* App Store Section */
+.app-downloads {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.store-badge {
   width: 130px;
-  margin: 6px 0;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.store-badge:hover {
+  transform: scale(1.05);
+}
+
+.app-downloads a {
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+.app-downloads a:hover {
+  text-decoration: none;
+}
+
+.app-downloads a:focus {
+  outline: none;
 }
 
 /* Bottom Bar */
 .footer-bottom {
-      font-family: "DM Sans Regular";
-
+  font-family: "DM Sans Regular", sans-serif;
   background: #fff;
   color: #000;
   text-align: center;
   padding: 10px 0;
   font-size: 14px;
+  margin-top: 30px;
 }
 
-/* Responsive */
-/* Responsive: Tablet */
-@media (max-width: 1024px) {
-  
+.footer-bottom p {
+  margin: 0;
+  font-family: "DM Sans Regular", sans-serif;
+  color: #000;
+}
+
+/* Responsive: Laptop (1025px - 1440px) */
+@media (max-width: 1440px) and (min-width: 1025px) {
+
+  .footer-main{
+    max-width: 1000px;
+  }
+  .footer {
+    padding: 35px 0 0 0;
+  }
 
   .footer-main {
-    gap: 30px;
-    justify-content: space-evenly;
+    gap: 40px;
   }
 
   .footer-column h3 {
     font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .footer-column p,
+  .footer-column a {
+    font-size: 15px;
+  }
+
+  .contact-info .icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .social-icons img {
+    width: 22px;
+    height: 22px;
+    padding: 3px;
+  }
+
+  .store-badge {
+    width: 125px;
+  }
+
+  .follow-label {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+  }
+}
+
+/* Responsive: Tablet (601px - 1024px) */
+@media (max-width: 1024px) and (min-width: 601px) {
+  .footer {
+    padding: 30px 0 0 0;
+  }
+
+  .footer-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10% 20%;
+        max-width: 800px;
+        justify-items: start;
+        padding: 0px 10%;
+  }
+
+  .footer-column {
+    flex: none;
+    max-width: none;
+    min-width: auto;
+    width: 100%;
+  }
+
+  .footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
   }
 
   .footer-column p,
   .footer-column a {
     font-size: 14px;
+  }
+
+  .contact-info {
+    margin: 8px 0;
   }
 
   .contact-info .icon {
@@ -149,33 +281,45 @@
     padding: 3px;
   }
 
-  .store-img {
-    width: 120px;
+  .store-badge {
+    width: 115px;
+  }
+
+  .follow-label {
+    font-size: 12px;
   }
 
   .footer-bottom {
-    font-size: 13px;
+    font-size: 12px;
+    margin-top: 25px;
   }
 }
 
-/* Responsive: Mobile */
+/* Responsive: Mobile (up to 600px) */
 @media (max-width: 600px) {
-  
+  .footer {
+    padding: 25px 0 0 0;
+  }
+
   .footer-main {
-    flex-direction: column;
-    align-items: center;
-    gap: 35px;
+       display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 9% 15%;
+        padding: 10px 70px;
   }
 
   .footer-column {
+    flex: none;
+    max-width: none;
+    min-width: auto;
     width: 100%;
-    text-align: center;
-    flex: 1 1 100px;
+    text-align: left;
   }
 
   .footer-column h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    margin-bottom: 8px;
   }
 
   .footer-column p,
@@ -185,38 +329,96 @@
   }
 
   .contact-info {
-    justify-content: center;
-    flex-wrap: wrap;
+    margin: 6px 0;
+    gap: 8px;
+  }
+
+  .contact-info .icon {
+    width: 14px;
+    height: 14px;
   }
 
   .follow-section {
     flex-direction: column;
-    align-items: center;
+    gap: 6px;
+    align-items: flex-start;
   }
 
   .follow-label {
-    margin-bottom: 6px;
-    font-size: 13px;
+    font-size: 11px;
+    margin-bottom: 4px;
   }
 
   .social-icons {
-    justify-content: center;
-    gap: 8px;
+    gap: 6px;
   }
 
   .social-icons img {
-    width: 20px;
-    height: 20px;
-    padding: 3px;
+    width: 18px;
+    height: 18px;
+    padding: 2px;
   }
 
-  .store-img {
-    width: 110px;
-    margin: 6px auto;
+  .store-badge {
+    width: 100px;
   }
 
   .footer-bottom {
-    font-size: 12px;
+    font-size: 11px;
     padding: 8px 0;
+    margin-top: 20px;
+  }
+}
+
+/* Extra small mobile (up to 480px) */
+@media (max-width: 480px) {
+  .footer-main {
+        gap: 9% 15%;
+        max-width: 100%;
+        padding: 0 50px;
+  }
+
+  .footer-column h3 {
+    font-size: 15px;
+  }
+
+  .footer-column p,
+  .footer-column a {
+    font-size: 12px;
+  }
+
+  .store-badge {
+    width: 90px;
+  }
+
+  .social-icons img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .contact-info .icon {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .footer {
+    background: #000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .footer-column a,
+  .social-icons a,
+  .store-badge {
+    transition: none;
+  }
+  
+  .social-icons a:hover,
+  .store-badge:hover {
+    transform: none;
   }
 }

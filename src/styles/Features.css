@@ -1,11 +1,13 @@
 @font-face {
   font-family: "DM Sans Regular";
   src: url("https://db.onlinewebfonts.com/t/d9d77150b3dda1eea88a7a8f979e7711.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "DM Sans Medium";
   src: url("https://db.onlinewebfonts.com/t/254e22acc9a3adcfe8330459cc54cabc.woff2") format("woff2");
+  font-display: swap;
 }
 
 .featurebox-wrapper {
@@ -45,7 +47,7 @@
 /* Gradient Text Styling */
 .featurebox-header h2 {
   font-family: "DM Sans Regular";
-    font-size: 2.5rem;
+  font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.2;
   margin: 0;
@@ -80,25 +82,44 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 2.5rem;
-  column-gap: 2rem;
+  column-gap: 3%;
   width: 100%;
   align-items: stretch;
 }
 
 .feature-item {
   display: flex;
-  align-items: stretch;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+/* Icon Container */
+.feature-icon-container {
+  display: flex;
+  align-items: center;
   justify-content: center;
+  margin-bottom: 1rem;
+  z-index: 2;
+  position: relative;
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  margin-bottom: 20%;
 }
 
 /* Box Styling */
 .feature-text-box {
-border-radius: 12px;
-background: #F5F5F5;
-
-box-shadow: 5px -5px 8px 0px #FFF, -4px 7px 8px 0px rgba(0, 0, 0, 0.12);
-     padding: 2rem;
-  width: 100%;
+  border-radius: 12px;
+  background: #F5F5F5;
+  box-shadow: 5px -5px 8px 0px #FFF, -4px 7px 8px 0px rgba(0, 0, 0, 0.12);
+  padding: 2rem;
+  width: 90%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -114,11 +135,8 @@ box-shadow: 5px -5px 8px 0px #FFF, -4px 7px 8px 0px rgba(0, 0, 0, 0.12);
   filter: drop-shadow(-6px 10px 12px rgba(0, 0, 0, 0.15)) drop-shadow(6px -6px 12px #FFF);
 }
 
-.feature-icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 1.5rem;
-  object-fit: contain;
+.feature-item:hover .feature-icon {
+  transform: scale(1.1);
 }
 
 .feature-text-box h3 {
@@ -140,6 +158,12 @@ box-shadow: 5px -5px 8px 0px #FFF, -4px 7px 8px 0px rgba(0, 0, 0, 0.12);
 }
 
 /* TABLET BREAKPOINT */
+@media (max-width: 1700px) and (min-width: 1025px) {
+  .featurebox-container {
+    max-width: 1100px;
+  }
+}
+
 @media (max-width: 1024px) and (min-width: 769px) {
   .featurebox-wrapper {
     padding: 3rem 0;
@@ -166,7 +190,10 @@ box-shadow: 5px -5px 8px 0px #FFF, -4px 7px 8px 0px rgba(0, 0, 0, 0.12);
   .feature-icon {
     width: 55px;
     height: 55px;
-    margin-bottom: 1.2rem;
+  }
+
+  .feature-icon-container {
+    margin-bottom: 1rem;
   }
 
   .feature-text-box h3 {
@@ -220,7 +247,10 @@ box-shadow: 5px -5px 8px 0px #FFF, -4px 7px 8px 0px rgba(0, 0, 0, 0.12);
   .feature-icon {
     width: 50px;
     height: 50px;
-    margin-bottom: 1rem;
+  }
+
+  .feature-icon-container {
+    margin-bottom: 0.8rem;
   }
 
   .feature-text-box h3 {
@@ -233,14 +263,13 @@ box-shadow: 5px -5px 8px 0px #FFF, -4px 7px 8px 0px rgba(0, 0, 0, 0.12);
     line-height: 1.5;
   }
   
- .decorativeimg {
-   display: none;
+  .decorativeimg {
+    display: none;
   }
 }
 
 /* SMALL MOBILE BREAKPOINT */
 @media (max-width: 480px) {
-  
   .featurebox-wrapper {
     padding: 2rem 0;
   }
@@ -270,7 +299,12 @@ box-shadow: 5px -5px 8px 0px #FFF, -4px 7px 8px 0px rgba(0, 0, 0, 0.12);
   .feature-icon {
     width: 50px;
     height: 50px;
-    margin-bottom: 0.8rem;
+    margin-bottom: 30%;
+  }
+
+  .feature-icon-container {
+    margin-bottom: 0.6rem;
+    margin-top: 5%;
   }
 
   .feature-text-box h3 {
@@ -284,7 +318,7 @@ box-shadow: 5px -5px 8px 0px #FFF, -4px 7px 8px 0px rgba(0, 0, 0, 0.12);
   }
   
   .decorativeimg {
-   display: none;
+    display: none;
   }
 }
 
@@ -304,13 +338,21 @@ box-shadow: 5px -5px 8px 0px #FFF, -4px 7px 8px 0px rgba(0, 0, 0, 0.12);
   outline-offset: 2px;
 }
 
+.feature-item:focus-within .feature-icon {
+  outline: 2px solid #4b7bec;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
-  .feature-text-box {
+  .feature-text-box,
+  .feature-icon {
     transition: none;
   }
   
-  .feature-text-box:hover {
+  .feature-text-box:hover,
+  .feature-item:hover .feature-icon {
     transform: none;
   }
 }
