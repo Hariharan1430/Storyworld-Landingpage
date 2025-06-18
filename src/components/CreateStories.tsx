@@ -9,11 +9,11 @@ import vilotestar from '../assests/i1.svg'
 
 const CreateStories: React.FC = () => {
   const handleGooglePlayClick = () => {
-    window.open('https://play.google.com/store', '_blank');
+    window.open(' https://play.google.com/store/apps/details?id=com.sivra.storyworld&pcampaignid=web_share', '_blank');
   };
 
   const handleAppStoreClick = () => {
-    window.open('https://apps.apple.com/', '_blank');
+    window.open(' https://apps.apple.com/in/app/the-story-world/id6743325945', '_blank');
   };
 
 

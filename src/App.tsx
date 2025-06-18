@@ -15,6 +15,7 @@ function App() {
     window.scrollTo(0, 0);
   }, []);
 
+  
   return (
     <>
       <Header />
@@ -22,12 +23,14 @@ function App() {
         {/* Home section - this is your hero/landing section */}
         <section id="home">
           <CreateStories />
+          <BorderFrameBox />
          
         </section>
         
+        
         {/* Features section */}
         <section id="features">
-           <BorderFrameBox />
+           
           <FeatureBox />
        
         </section>

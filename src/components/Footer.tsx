@@ -4,7 +4,7 @@ import Mail from '../assests/bottom-nav-bar-mail-icon.svg'
 import Fbicon from '../assests/FB-icon.svg'
 import instaicon from "../assests/insta-icon.svg"
 import xicon from '../assests/X-icon.svg'
-import whatsupicon from '../assests/whatsapp-icon.svg'
+import linkedinicon from '../assests/IN-ICON-icon.svg'
 import Playstoreimage from '../assests/playstore.svg'
 import Ximage from '../assests/ios.svg'
 
@@ -93,8 +93,8 @@ const Footer: React.FC = () => {
                 role="listitem"
               >
                 <img 
-                  src={whatsupicon} 
-                  alt="WhatsApp" 
+                  src={linkedinicon} 
+                  alt="linkdedin" 
                   width="23" 
                   height="23"
                 />
@@ -107,18 +107,22 @@ const Footer: React.FC = () => {
         <div className="footer-column">
           <h3>Legal</h3>
           <nav aria-label="Legal pages">
-            <a 
-              href="/privacy-policy"
-              aria-label="Read our Privacy Policy"
-            >
-              Privacy Policy
-            </a>
-            <a 
-              href="/terms-conditions"
-              aria-label="Read our Terms and Conditions"
-            >
-              Terms & Conditions
-            </a>
+  <a 
+    href="/PrivacyPolicy.html"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Read our Privacy Policy"
+  >
+    Privacy Policy
+  </a>
+             <a 
+    href="/TermsConditions.html"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Read our Terms and Conditions"
+  >
+    Terms & Conditions
+  </a>
           </nav>
         </div>
 
@@ -127,7 +131,7 @@ const Footer: React.FC = () => {
           <h3>Download</h3>
           <div className="app-downloads" role="list" aria-label="Download our mobile app">
             <a 
-              href="https://play.google.com/store/apps/details?id=com.storyworld.app" 
+              href=" https://play.google.com/store/apps/details?id=com.sivra.storyworld&pcampaignid=web_share" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Download StoryWorld app from Google Play Store"
@@ -142,7 +146,7 @@ const Footer: React.FC = () => {
               />
             </a>
             <a 
-              href="https://apps.apple.com/app/storyworld/id123456789" 
+              href=" https://apps.apple.com/in/app/the-story-world/id6743325945" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Download StoryWorld app from Apple App Store"
