@@ -17,6 +17,7 @@
     url("https://db.onlinewebfonts.com/t/3745f5043df4f9424d7d094f3411f542.ttf")format("truetype"),
     url("https://db.onlinewebfonts.com/t/3745f5043df4f9424d7d094f3411f542.svg#Titillium")format("svg");
 }
+
 /* Header Styles */
 .header {
   width: 100%;
@@ -69,20 +70,21 @@
 /* Desktop Navigation */
 .desktop-nav {
   display: flex;
-  gap: 2rem;
+  gap: 7%;
   justify-content: center;
   flex: 1;
 }
 
 .nav-link {
   font-family: "Titillium Light", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   color: #3e0c75;
   text-decoration: none;
   font-weight: 700;
   transition: color 0.3s ease;
   letter-spacing: 1px;
   position: relative;
+  transition: color 0.3s;
 }
 
 .nav-link:hover,
@@ -103,37 +105,53 @@
   transition: width 0.3s ease;
 }
 
+/* 🛠️ Replace this block: */
 .nav-link:hover::after,
 .nav-link.active::after {
   width: 100%;
 }
 
-/* Desktop Download Button */
-.desktop-download {
+/* ✅ With this block (hover takes priority visually) */
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Desktop Social Icons */
+.desktop-social {
   margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.download-btn {
-  font-family: "Titillium", sans-serif;
-  font-size: 16px;
-  padding: 0.6rem 1.2rem;
-  border: 2px solid #3e0c75;
-  border-radius: 999px;
-  background: transparent;
-  font-weight: 600;
-  color: #3e0c75;
-  cursor: pointer;
-  text-decoration: none;
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #3e0c75;
   transition: all 0.3s ease;
-  letter-spacing: 1px;
+  text-decoration: none;
 }
 
-.download-btn:hover {
-  background-color: #3e0c75;
-  color: #fff;
+.social-link:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(62, 12, 117, 0.3);
 }
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+
 
 /* Hamburger Menu Button */
 .hamburger-btn {
@@ -212,6 +230,45 @@
   border-bottom: none;
 }
 
+/* Mobile Social Icons */
+.mobile-social {
+  display: none; /* Hidden on mobile */
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.mobile-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #3e0c75;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.mobile-social-link:hover {
+  background-color: #3e0c75;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(62, 12, 117, 0.3);
+}
+
+.mobile-social-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+.mobile-social-link:hover .mobile-social-icon {
+  filter: brightness(0) invert(1); /* Makes icon white on hover */
+}
+
 /* Mobile Overlay */
 .mobile-overlay {
   display: none;
@@ -235,16 +292,20 @@
   }
   
   .nav-link {
-    font-size: 14px;
-  }
-  
-  .download-btn {
-    font-size: 14px;
-    padding: 0.5rem 1rem;
+    font-size: 16px;
   }
   
   .desktop-nav {
-    gap: 1.5rem;
+    gap: 5%;
+  }
+  
+  /* Hide social icons on tablet */
+  .desktop-social {
+    display: flex;
+  }
+  .social-icon{
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -262,7 +323,7 @@
     display: none;
   }
   
-  .desktop-download {
+  .desktop-social {
     display: none;
   }
   
@@ -298,16 +359,24 @@
     font-size: 16px;
     padding: 0.8rem 0;
   }
+  
+  .mobile-social {
+    gap: 1rem;
+  }
+  
+  .mobile-social-icon {
+    width: 20px;
+    height: 20px;
+  }
 }
-
 
 /* Focus styles for accessibility */
 .nav-link:focus,
-.download-btn:focus,
+.social-link:focus,
+.mobile-social-link:focus,
 .mobile-nav-link:focus,
 .hamburger-btn:focus {
   outline: none;
-  /* outline-offset: 2px; */
 }
 
 /* Prevent body scroll when mobile menu is open */

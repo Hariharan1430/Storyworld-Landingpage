@@ -20,7 +20,6 @@ function App() {
     <>
       <Header />
       <main>
-        {/* Home section - this is your hero/landing section */}
         <section id="home">
           <CreateStories />
           <BorderFrameBox />
@@ -28,7 +27,6 @@ function App() {
         </section>
         
         
-        {/* Features section */}
         <section id="features">
            
           <FeatureBox />
@@ -36,9 +34,7 @@ function App() {
         </section>
            <BorderImageBox2 />
 
-        
-        {/* How it Works section */}
-        <section id="how-it-works">
+       <section id="how-it-works">
                        <TeachChildren />
 
           <BorderImageBox3 />
